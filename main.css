@@ -1,0 +1,13 @@
+.menu {
+	height: 100%;
+	width: 15%;
+	position: fixed;
+	border-style: solid;
+	border-width: 2px;
+}
+.menu a{
+	border-style: solid;
+	border-width: 1;
+	width; 100%:
+	color; black:
+}
