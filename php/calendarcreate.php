@@ -8,6 +8,9 @@
 	<link rel="stylesheet" type="text/css" href="../css/main.css">
 </head>
 <body>
+	<?php
+		include 'functions.php';
+	?>
 	<div class="menu">
 		<table>
 			<tr onclick="location.href='php/login.php';" style="cursor:pointer;">
