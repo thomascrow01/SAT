@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <!-- index.php Thomas Crow 6/26/2018 -->
-<!-- Last updated 7/5/2018 -->
+<!-- Last updated 7/19/2018 -->
 
 <head>
 	<title>SAT</title>
@@ -9,6 +9,7 @@
 </head>
 <body>
 	<?php
+		include 'functions.php';
 		$servername = "localhost";
 		$username = "root";
 		$password = "root";
