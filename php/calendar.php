@@ -9,7 +9,7 @@
 </head>
 <body>
 	<?php
-		include functions.php;
+		include 'functions.php';
 		$servername = "localhost";
 		$username = "root";
 		$password = "root";
