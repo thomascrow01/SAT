@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <!-- calendar.php Thomas Crow 7/3/2018 -->
-<!-- Last update 7/5/2018 -->
+<!-- Last update 7/19/2018 -->
 
 <head>
 	<title>SAT</title>
@@ -9,6 +9,7 @@
 </head>
 <body>
 	<?php
+		include functions.php;
 		$servername = "localhost";
 		$username = "root";
 		$password = "root";
