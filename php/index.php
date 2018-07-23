@@ -28,21 +28,22 @@
 	<div class="menu">
 		<table>
 			<?php
+				/* Check if user is logged in. */
 				if($_SESSION['loggedin'] == true){
-					<tr>
+					?><tr>
 						<td>
 							<input style="display:none;" type="text" value="logout">
 							<form action="#">
-								<input type="submit">
+								<input value="Logout" type="submit">
 							</form>
 						</td>
-					</tr>
+					</tr><?php
 				}else{
-					<tr onclick="location.href='login.php';" style="cursor:pointer;">
+					?><tr onclick="location.href='login.php';" style="cursor:pointer;">
 						<td>
 							<h3>Login</h3>
 						</td>
-					</tr>
+					</tr><?php
 				}
 			?>
 			<tr onclick="location.href='calendar.php';" style="cursor:pointer;">
@@ -61,7 +62,7 @@
 		<table style="border-style:solid;border-width:2px;width:75%;margin:0 auto;">
 			<tr>
 				<td>
-					<h3><a href="login.php">Sign in</a></h3>
+					<h3><a href="login.php">Login</a></h3>
 				</td>
 			</tr>
 			<tr>
