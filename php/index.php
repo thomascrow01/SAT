@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <!-- index.php Thomas Crow 6/26/2018 -->
-<!-- Last updated 7/19/2018 -->
+<!-- Last updated 7/24/2018 -->
 
 <head>
 	<title>SAT</title>
@@ -9,30 +9,42 @@
 </head>
 <body>
 	<?php
+		session_start();
 		include 'functions.php';
 		$servername = "localhost";
 		$username = "root";
 		$password = "root";
-
 		// Create connection
 		$conn = new mysqli($servername, $username, $password);
-
 		// Check connection
 		if ($conn->connect_error) {
 			die("Connection failed: " . $conn->connect_error);
 		}
-		//echo "Connected successfully";
+		// Connected successfully
 		$sql = "SELECT * FROM sat_database.calendar ORDER BY starttime";
-
+		$user = "SELECT * FROM sat_database.users ORDER BY username";
 		$result = $conn->query($sql);
 	?>
 	<div class="menu">
 		<table>
-			<tr onclick="location.href='login.php';" style="cursor:pointer;">
-				<td>
-					<h3>Login</h3>
-				</td>
-			</tr>
+			<?php
+				if($_SESSION['loggedin'] == true){
+					<tr>
+						<td>
+							<input style="display:none;" type="text" value="logout">
+							<form action="#">
+								<input type="submit">
+							</form>
+						</td>
+					</tr>
+				}else{
+					<tr onclick="location.href='login.php';" style="cursor:pointer;">
+						<td>
+							<h3>Login</h3>
+						</td>
+					</tr>
+				}
+			?>
 			<tr onclick="location.href='calendar.php';" style="cursor:pointer;">
 				<td>
 					<h3>Calendar</h3>
