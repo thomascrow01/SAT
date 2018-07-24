@@ -2,6 +2,9 @@
 /* main.css Thomas Crow 6/26/2018 */
 /* Last updated 7/5/2018 */
 
+body{
+	background-image: url("../media/stockmeetingroom.jpg");
+}
 .notmenu{
 	padding-left: 15%;
 }
