@@ -77,6 +77,9 @@
 		<div style="border-style:solid;border-width:2px;display:inline;">
 			<a href="noticeboard.php">View the notice board</a>
 		</div>
+		<div style="border-style:solid;border-width:2px;display:inline;">
+			<h1 id="curtime"></h1>
+		</div>
 	</div>
 	<table class="notmenu">
   		<tr>
@@ -97,4 +100,16 @@
 		echo "</table>";
 		$conn->close();
 	?>
+	<script>
+		// Get the date and put it into a format.
+		var today = new Date();
+		var year = today.getFullYear();
+		var month = today.getMonth() + 1;
+		var day = today.getDate();
+		var hour = today.getHours();
+		var minute = today.getMinutes();
+		var time = year + "-" + month + "-" + day + " " + hour + ":" + minute;
+		//replace the html element with the id "curtime" with the date.
+		document.getElementById("curtime").innerHTML = time;
+	</script>
 </body>
