@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <!-- noticeboard.php Thomas Crow 7/25/2018 -->
-<!-- Last update 7/25/2018 -->
+<!-- Last update 8/01/2018 -->
 
 <head>
 	<title>SAT</title>
@@ -9,6 +9,7 @@
 </head>
 <body>
 	<?php
+		session_start();
 		include 'functions.php';
 		$servername = "localhost";
 		$username = "root";
