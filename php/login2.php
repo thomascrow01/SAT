@@ -9,6 +9,7 @@
 </head>
 <body>
 	<?php
+		session_start();
 		include 'functions.php';
 		$username = $_POST['username'];
 		$password = $_POST['password'];
@@ -55,7 +56,18 @@
 		</table>
 	</div>
 	<div class="notmenu">
-		<h4>Login failed.</h4>
-		<h5><a href="login1.php">Go back.</a></h5>
+		<?php
+			if($_SESSION["loggedin"]){
+				?>
+				<h4>You have logged in.</h4>
+				<h5><a href="index.php">Go to index.</a></h5>
+				<?php
+			}else{
+				?>
+				<h4>Login failed.</h4>
+				<h5><a href="login1.php">Go back.</a></h5>
+				<?php
+			}
+		?>
 	</div>
 </body>
