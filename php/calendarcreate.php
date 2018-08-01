@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <!-- calendarcreate.php Thomas Crow 7/5/2018 -->
-<!-- Last updated 7/19/2018 -->
+<!-- Last updated 8/01/2018 -->
 
 <head>
 	<title>SAT</title>
@@ -9,6 +9,7 @@
 </head>
 <body>
 	<?php
+		session_start();
 		include 'functions.php';
 	?>
 	<div class="menu">
