@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <!-- calendarcreate.php Thomas Crow 7/5/2018 -->
-<!-- Last updated 8/01/2018 -->
+<!-- Last updated 8/02/2018 -->
 
 <head>
 	<title>SAT</title>
@@ -32,7 +32,7 @@
 		</table>
 	</div>
 	<div class="notmenu">
-		<form action="createreservation2.php" method="POST">
+		<form action="calendarcreate2.php" method="POST">
 			<table>
 				<tr>
 					<td>Room</td>
