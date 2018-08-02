@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <!-- index.php Thomas Crow 6/26/2018 -->
-<!-- Last updated 7/24/2018 -->
+<!-- Last updated 8/03/2018 -->
 
 <head>
 	<title>SAT</title>
@@ -33,13 +33,13 @@
 					?><tr>
 						<td>
 							<input style="display:none;" type="text" value="logout">
-							<form action="#">
+							<form action="logout.php">
 								<input value="Logout" type="submit">
 							</form>
 						</td>
 					</tr><?php
 				}else{
-					?><tr onclick="location.href='login.php';" style="cursor:pointer;">
+					?><tr onclick="location.href='login1.php';" style="cursor:pointer;">
 						<td>
 							<h3>Login</h3>
 						</td>
@@ -62,7 +62,7 @@
 		<table style="border-style:solid;border-width:2px;width:75%;margin:0 auto;">
 			<tr>
 				<td>
-					<h3><a href="login.php">Login</a></h3>
+					<h3><a href="login1.php">Login</a></h3>
 				</td>
 			</tr>
 			<tr>
@@ -113,3 +113,4 @@
 		document.getElementById("curtime").innerHTML = time;
 	</script>
 </body>
+
