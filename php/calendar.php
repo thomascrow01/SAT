@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <!-- calendar.php Thomas Crow 7/3/2018 -->
-<!-- Last update 8/01/2018 -->
+<!-- Last update 8/03/2018 -->
 
 <head>
 	<title>SAT</title>
@@ -64,21 +64,16 @@
 			<th>Reserved by</th>
 		</tr>
 		<?php
-		 //echo date("Y-m-d h:i:sa");
-		 //echo date("Y-m-d h:i:sa",strtotime('+4 hour',strtotime(date("Y-m-d h:i:sa"))));
-	   	 // output data in each row
-		
-		 //$from_date = date("Y-m-d",strtotime('06/10/2015'));
-		 //$to_date = date("Y-m-d",strtotime('06/16/2015'));//$_POST['to_date'];
-		 //$query = "SELECT * FROM table WHERE from_date >= '".$from_date."' AND to_date <= '".$to_date."'";
-
     		while($row = $result->fetch_assoc()) {
 				echo "
 					<tr>
 	      				<td>".$row["starttime"]."</td>
 	      				<td>".$row["room"]."</td>
-	      				<td>".$row["company"]."</td>
-		  			</tr>";
+	      				<td>".$row["company"]."</td>";
+	      		if($_SESSION["adminstatus"]){
+	      			echo "<td><a href=\"calendardelete.php.php?deleteid=".row["calendarID"]."\">Delete</a></td>";
+	      			}
+		  		echo "</tr>";
 			}
 		echo "</table>";
 		$conn->close();
